@@ -1,0 +1,16 @@
+.git*
+
+Dockerfile
+.dockerignore
+
+BUILD.*.md 
+
+appveyor*
+.travis.*
+
+tests
+examples
+samples
+
+scripts
+FetchBundle.bat

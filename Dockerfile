@@ -21,8 +21,8 @@ RUN cd cmake-build && \
 RUN cd cmake-build && \
     make -j$(nproc)
 
-RUN cmake-build && \
+RUN cd cmake-build && \
     make install/strip
 
-RUN cmake-build && \
+RUN cd cmake-build && \
     make test
