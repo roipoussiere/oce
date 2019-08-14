@@ -15,5 +15,10 @@ COPY . /oce
 WORKDIR /oce
 RUN mkdir cmake-build
 
-RUN cd cmake-build && \
+RUN cd cmake-build; \
     cmake ..
+
+ARG BUILD_TIMEOUT=1.5h
+RUN cd cmake-build; \
+    timeout ${BUILD_TIMEOUT} make -j$(nproc); \
+    exit 0
